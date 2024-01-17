@@ -1,0 +1,1847 @@
+{
+	"info": {
+		"_postman_id": "9a286322-4deb-454e-9b56-f0a5f18aeb81",
+		"name": "API By Laravel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5096052"
+	},
+	"item": [
+		{
+			"name": "Auth Module",
+			"item": [
+				{
+					"name": "Register New User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "ali hassan",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "alihassan@yahoo.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "ali hassan",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "alihassan@yahoo.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "12345678",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/register",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 16 Jan 2024 08:16:54 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 16 Jan 2024 08:16:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.11"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 201,\n    \"msg\": \"User Account Created Successfully\",\n    \"data\": {\n        \"token\": \"2|cTOqd8HFUnMay3HQ9EuRxdiP5g6fC3HXDMvRCj4i\",\n        \"name\": \"ali hassan\",\n        \"email\": \"alihassan@yahoo.com\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "alihassan@yahoo.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "alihassan@yahoo.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 16 Jan 2024 10:05:53 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 16 Jan 2024 10:05:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.11"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"msg\": \"Login Successfully\",\n    \"data\": {\n        \"token\": \"3|Za07ei8hvn0Dd5WAD5F0lUNcxBaddbzfSVLRrgjO\",\n        \"name\": \"ali hassan\",\n        \"email\": \"alihassan@yahoo.com\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Logout",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "11|OXjaDSvZcS0NQcQ8Cgn9khKBvIVTJudCq7mJJoyN",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/logout",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/logout",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"logout"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 16 Jan 2024 10:24:05 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 16 Jan 2024 10:24:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.11"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "X438d754c6d82a37f3b31fae9716afa46"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Settings",
+			"item": [
+				{
+					"name": "Get All Settings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/settings",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"settings"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/settings",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"settings"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 16 Jan 2024 05:10:01 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 16 Jan 2024 05:10:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.11"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"msg\": \"Settings Retrieved Successfully\",\n    \"data\": {\n        \"about me\": \"\",\n        \"why us\": null,\n        \"goal\": null,\n        \"vision\": null\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Location Module",
+			"item": [
+				{
+					"name": "Get All Cities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/cities",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"cities"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/cities",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"cities"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 16 Jan 2024 05:35:14 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 16 Jan 2024 05:35:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.11"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"msg\": \"Cities Retrieved Successfully\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Cairo\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Districts based on City",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/districts/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"districts",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/districts?city=1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"districts"
+									],
+									"query": [
+										{
+											"key": "city",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 16 Jan 2024 06:09:31 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 16 Jan 2024 06:09:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.11"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"msg\": \"Districts retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Maadi\",\n            \"city\": {\n                \"id\": 1,\n                \"name\": \"Cairo\"\n            }\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Nasser\",\n            \"city\": {\n                \"id\": 1,\n                \"name\": \"Cairo\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Messages Module",
+			"item": [
+				{
+					"name": "Store New Message",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Hussein Saad",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "hs777it@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "0100000555",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "This is a message",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/message",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"message"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Hussein Saad",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "hs777it@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "0100000555",
+											"type": "text"
+										},
+										{
+											"key": "message",
+											"value": "This is a message",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/message",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"message"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 16 Jan 2024 07:09:49 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 16 Jan 2024 07:09:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.11"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 201,\n    \"msg\": \"Sent Successfully\",\n    \"data\": []\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Domains Module",
+			"item": [
+				{
+					"name": "Get All Domains",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/domains",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"domains"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/domains",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"domains"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 16 Jan 2024 07:13:41 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 16 Jan 2024 07:13:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.11"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"msg\": \"Domains Retrieved Successfully\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"مبدعون وافراد\",\n            \"ads count\": 0\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Ads Module",
+			"item": [
+				{
+					"name": "Get All Ads With Pagination",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/ads",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"ads"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/ads",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"ads"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 16 Jan 2024 11:09:39 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 16 Jan 2024 11:09:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.11"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"msg\": \"Ads Retrieved Successfully\",\n    \"data\": [\n        {\n            \"id\": 3,\n            \"title\": \"New Add\",\n            \"description\": \"Just New Add\",\n            \"phone\": \"01050304090\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Latest Ads",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/ads/latest",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"ads",
+								"latest"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/ads/latest",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"ads",
+										"latest"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jan 2024 05:47:27 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jan 2024 05:47:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.11"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"msg\": \"Latest Ads Retrieved Successfully\",\n    \"data\": [\n        {\n            \"id\": 4,\n            \"title\": \"New Add #1\",\n            \"description\": \"Just New Add 1\",\n            \"phone\": \"01050304090\"\n        },\n        {\n            \"id\": 5,\n            \"title\": \"New Add #2\",\n            \"description\": \"Just New Add 2\",\n            \"phone\": \"01066604090\"\n        },\n        {\n            \"id\": 6,\n            \"title\": \"New Add #3\",\n            \"description\": \"Just New Add 3\",\n            \"phone\": \"01088804090\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Ads based on domain",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/ads/domain/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"ads",
+								"domain",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/ads/domain/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"ads",
+										"domain",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jan 2024 05:48:50 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jan 2024 05:48:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.11"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"msg\": \"Ads in the domain retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": 4,\n            \"title\": \"New Add #1\",\n            \"description\": \"Just New Add 1\",\n            \"phone\": \"01050304090\"\n        },\n        {\n            \"id\": 5,\n            \"title\": \"New Add #2\",\n            \"description\": \"Just New Add 2\",\n            \"phone\": \"01066604090\"\n        },\n        {\n            \"id\": 6,\n            \"title\": \"New Add #3\",\n            \"description\": \"Just New Add 3\",\n            \"phone\": \"01088804090\"\n        },\n        {\n            \"id\": 7,\n            \"title\": \"New Add #4\",\n            \"description\": \"Just New Add 4\",\n            \"phone\": \"01022204090\"\n        },\n        {\n            \"id\": 8,\n            \"title\": \"New Add #5\",\n            \"description\": \"Just New Add 5\",\n            \"phone\": \"01000004090\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Search Ads",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/ads/search?q=car",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"ads",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "car"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/ads/search?q=car",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"ads",
+										"search"
+									],
+									"query": [
+										{
+											"key": "q",
+											"value": "car"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jan 2024 08:27:25 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jan 2024 08:27:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.11"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"msg\": \"Search completed\",\n    \"data\": [\n        {\n            \"id\": 4,\n            \"title\": \"Car BMW\",\n            \"description\": \"Just New Add 1\",\n            \"phone\": \"01050304090\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create User Ad",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "12|XRSr6qFzsAvM3qZHulaxqXUJcPynXEfoHG2Fm2e8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "new ad title test",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "010435435345345",
+									"type": "text"
+								},
+								{
+									"key": "text",
+									"value": "new ad test",
+									"type": "text"
+								},
+								{
+									"key": "domain_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/ads/create",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"ads",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "new ad title test",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "010435435345345",
+											"type": "text"
+										},
+										{
+											"key": "text",
+											"value": "new ad test",
+											"type": "text"
+										},
+										{
+											"key": "domain_id",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/ads/create",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"ads",
+										"create"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jan 2024 16:15:37 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jan 2024 16:15:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.11"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "Xac40ca494d5d2936e36b15310ea6ca9b"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 201,\n    \"msg\": \"Your Ad created successfully\",\n    \"data\": {\n        \"id\": 9,\n        \"title\": \"new ad title test\",\n        \"description\": \"new ad test\",\n        \"phone\": \"010435435345345\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update User Ad",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "12|XRSr6qFzsAvM3qZHulaxqXUJcPynXEfoHG2Fm2e8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "update new ad title test",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "010435435345345",
+									"type": "text"
+								},
+								{
+									"key": "text",
+									"value": "update new ad test",
+									"type": "text"
+								},
+								{
+									"key": "domain_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/ads/update/9",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"ads",
+								"update",
+								"9"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "update new ad title test",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "010435435345345",
+											"type": "text"
+										},
+										{
+											"key": "text",
+											"value": "update new ad test",
+											"type": "text"
+										},
+										{
+											"key": "domain_id",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/ads/update/9",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"ads",
+										"update",
+										"9"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jan 2024 16:26:46 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jan 2024 16:26:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.11"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "Xce3dab5b5b87f10712f4e2a4078510a0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 201,\n    \"msg\": \"Your Ad updated successfully\",\n    \"data\": {\n        \"id\": 9,\n        \"title\": \"update new ad title test\",\n        \"description\": \"update new ad test\",\n        \"phone\": \"010435435345345\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete User Ad",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "12|XRSr6qFzsAvM3qZHulaxqXUJcPynXEfoHG2Fm2e8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/api/ads/delete/9",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"ads",
+								"delete",
+								"9"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{base_url}}/api/ads/delete/9",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"ads",
+										"delete",
+										"9"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jan 2024 16:31:46 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jan 2024 16:31:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.11"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "X4e70bf2ae4bef603a87b912151aebb07"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"msg\": \"Your Ad deleted successfully\",\n    \"data\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Get My Ads",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "12|XRSr6qFzsAvM3qZHulaxqXUJcPynXEfoHG2Fm2e8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/api/ads/myads",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"ads",
+								"myads"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{base_url}}/api/ads/myads",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"ads",
+										"myads"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jan 2024 16:38:17 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jan 2024 16:38:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.11"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "Xef5f01160d94390683d63b3c81d22b99"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"msg\": \"My ads retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": 7,\n            \"title\": \"New Add #4\",\n            \"description\": \"Just New Add 4\",\n            \"phone\": \"01022204090\"\n        },\n        {\n            \"id\": 8,\n            \"title\": \"New Add #5\",\n            \"description\": \"Just New Add 5\",\n            \"phone\": \"01000004090\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:8000"
+		}
+	]
+}

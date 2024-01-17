@@ -1,0 +1,34 @@
+
+https://www.webfx.com/web-development/glossary/http-status-codes/
+https://laravel.com/docs/10.x/sanctum
+https://laravel.com/docs/10.x/passport
+https://jwt.io/
+https://laracoding.com/how-to-seed-multiple-rows-at-once-using-laravel-factories/
+
+php artisan make:controller Api/SettingController --api
+
+php artisan make:controller Api/SettingController --invokable
+
+php artisan make:resource SettingResource
+
+php artisan make:requesst NewmessageRequest
+
+php artisan make:factory AdFactory --model=Ad
+php artisan make:seeder AdSeeder
+php artisan db:seed --class=AdSeeder
+
+
+=============================================================
+
+Github:
+
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/hs777it/Laravel-Ads-API.git
+git push -u origin main
+------------------------------------------
+git remote add origin https://github.com/hs777it/Laravel-Ads-API.git
+git branch -M main
+git push -u origin main
