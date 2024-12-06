@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\Models\Domain;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class AdResource extends JsonResource
@@ -19,6 +20,7 @@ class AdResource extends JsonResource
             'title' => $this->title,
             'description' => $this->text,
             'phone' => $this->phone,
+            'cat' => $this->domain->name,
         ];
     }
 }

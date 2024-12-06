@@ -5,25 +5,31 @@ namespace App\Http\Controllers\Api;
 use App\Models\User;
 use App\Helpers\ApiResponse;
 use Illuminate\Http\Request;
-use Illuminate\Validation\Rules;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rules;
 
 class AuthController extends Controller
 {
     public function register(Request $request)
     {
-        $validator = Validator::make($request->all(), [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'email', 'max:255', 'unique:' . User::class],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
-        ], [], [
-            'name' => 'Name',
-            'email' => 'Email',
-            'password' => 'Password',
-        ]);
+
+        $validator = Validator::make(
+            $request->all(),
+            [
+                'name' => ['required', 'string', 'max:255'],
+                'email' => ['required', 'email', 'max:255', 'unique:' . User::class],
+                'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            ],
+            [],
+            [
+                'name' => 'Name',
+                'email' => 'Email',
+                'password' => 'Password',
+            ]
+        );
 
         if ($validator->fails()) {
             return ApiResponse::sendResponse(
@@ -77,6 +83,6 @@ class AuthController extends Controller
     public function logout(Request $request)
     {
         $request->user()->currentAccessToken()->delete();
-        return ApiResponse::sendResponse(204, 'Logged Out Successfully', []);
+        return ApiResponse::sendResponse(200, 'Logged Out Successfully', []);
     }
 }

@@ -111,6 +111,5 @@ class Domain extends Model
         $query->where('status', '1');
     }
 
-
     ##--------------------------------- ACCESSORS & MUTATORS
 }

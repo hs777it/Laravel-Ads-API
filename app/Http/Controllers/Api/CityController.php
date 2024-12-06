@@ -26,6 +26,6 @@ class CityController extends Controller
                 CityResource::collection($cities)
             );
         }
-        return ApiResponse::sendResponse(200, 'Cities is empty', null);
+        return ApiResponse::sendResponse(200, 'Cities is empty', []);
     }
 }

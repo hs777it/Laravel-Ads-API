@@ -22,7 +22,11 @@ class AdRequest extends FormRequest
     protected function failedValidation(Validator $validator)
     {
         if ($this->is('api/*')) {
-            $response = ApiResponse::sendResponse(422, 'Validation Errors', $validator->messages()->all());
+            $response = ApiResponse::sendResponse(
+                422,
+                'Validation Errors',
+                $validator->messages()->all()
+            );
             throw new ValidationException($validator, $response);
         }
     }

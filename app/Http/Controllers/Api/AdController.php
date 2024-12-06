@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AdRequest;
 use App\Http\Resources\AdResource;
+use App\Models\Domain;
 
 class AdController extends Controller
 {
@@ -38,6 +39,7 @@ class AdController extends Controller
             }
             return ApiResponse::sendResponse(200, 'Ads Retrieved Successfully', $data);
         }
+
         return ApiResponse::sendResponse(200, 'No Ads available', []);
     }
 
@@ -57,11 +59,20 @@ class AdController extends Controller
     public function domain($domain_id)
     {
         $ads = Ad::where('domain_id', $domain_id)->latest()->get();
+        $cat = Domain::where('id', $domain_id)->first()->name;
+
         if (count($ads) > 0) {
+
+            $data = [
+                'category' =>  $cat,
+                'count' => count($ads),
+                'ads' => AdResource::collection($ads),
+            ];
+
             return ApiResponse::sendResponse(
                 200,
-                'Ads in the domain retrieved successfully',
-                AdResource::collection($ads)
+                'Ads in the ' . $cat . ' retrieved successfully',
+                $data // AdResource::collection($ads)
             );
         }
         return ApiResponse::sendResponse(200, 'empty', []);
@@ -69,16 +80,15 @@ class AdController extends Controller
 
     public function search(Request $request)
     {
+        // $word = $request->has('q') ?? null;
         $word = $request->has('q') ? $request->input('q') : null;
+
         $ads = Ad::when($word != null, function ($q) use ($word) {
             $q->where('title', 'like', '%' . $word . '%');
         })->latest()->get();
+
         if (count($ads) > 0) {
-            return ApiResponse::sendResponse(
-                200,
-                'Search completed',
-                AdResource::collection($ads)
-            );
+            return ApiResponse::sendResponse(200,'Search completed',AdResource::collection($ads));
         }
         return ApiResponse::sendResponse(200, 'No matching data', []);
     }
@@ -89,7 +99,11 @@ class AdController extends Controller
         $data['user_id'] = $request->user()->id;
         $record = Ad::create($data);
         if ($record) {
-            return ApiResponse::sendResponse(201, 'Your Ad created successfully', new AdResource($record));
+            return ApiResponse::sendResponse(
+                201,
+                'Your Ad created successfully',
+                new AdResource($record)
+            );
         }
     }
 
@@ -97,13 +111,21 @@ class AdController extends Controller
     {
         $ad = Ad::findOrFail($adId);
         if ($ad->user_id != $request->user()->id) {
-            return ApiResponse::sendResponse(403, 'You aren\'t allowed to take this action', []);
+            return ApiResponse::sendResponse(
+                403,
+                'You aren\'t allowed to take this action',
+                []
+            );
         }
 
         $data = $request->validated();
         $record = $ad->update($data);
         if ($record) {
-            return ApiResponse::sendResponse(201, 'Your Ad updated successfully', new AdResource($ad));
+            return ApiResponse::sendResponse(
+                201,
+                'Your Ad updated successfully',
+                new AdResource($ad)
+            );
         }
     }
 
@@ -111,7 +133,11 @@ class AdController extends Controller
     {
         $ad = Ad::findOrFail($adId);
         if ($ad->user_id != $request->user()->id) {
-            return ApiResponse::sendResponse(403, 'You aren\'t allowed to take this action', []);
+            return ApiResponse::sendResponse(
+                403,
+                'You aren\'t allowed to take this action',
+                []
+            );
         }
         $success = $ad->delete();
         if ($success) return ApiResponse::sendResponse(200, 'Your Ad deleted successfully', []);

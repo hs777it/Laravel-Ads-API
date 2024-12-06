@@ -18,6 +18,8 @@ class SettingController extends Controller
      */
     public function __invoke(Request $request)
     {
+        // dd('you are here');
+
         // $settings = Setting::findOrFail(1);
         // return $settings;
         // return new SettingResource($settings);
@@ -25,12 +27,15 @@ class SettingController extends Controller
         // $settings = Setting::get();
         // return SettingResource::collection($settings);
 
-        $settings = Setting::find(1);
+        $settings = Setting::find(1); 
         if ($settings) {
             return ApiResponse::sendResponse(200,
-             'Settings Retrieved Successfully',
-             new SettingResource($settings));
+            'Settings Retrieved Successfully',
+            new SettingResourc($settings));
         }
+        // return SettingsResource::collection($settings);
+        // return ApiResponse::sendResponse(204, 'Settings Not Found', []); // null or []
         return ApiResponse::sendResponse(200, 'Settings Not Found', []); // null or []
+
     }
 }

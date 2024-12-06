@@ -15,6 +15,7 @@ class SettingResource extends JsonResource
     public function toArray($request)
     {
         return [
+            // $this: Colellection of data model
             'about me' => $this->about_us,
             'why us' => $this->why_us,
             'goal' => $this->goal,

@@ -19,6 +19,7 @@ class NewMessageRequest extends FormRequest
         return true;
     }
 
+    // Validation errors, Predefine Schema of Response
     protected function failedValidation(Validator $validator)
     {
         if ($this->is('api/*')) {
@@ -51,6 +52,7 @@ class NewMessageRequest extends FormRequest
     public function attributes()
     {
         return [
+            // 'name'    => __('lang.name'),
             'name'    => 'Name',
             'email'   => 'Email',
             'phone'   => 'Phone',

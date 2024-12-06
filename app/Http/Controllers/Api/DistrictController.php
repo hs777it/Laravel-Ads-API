@@ -16,6 +16,7 @@ class DistrictController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    
     // public function __invoke(Request $request, $city_id)
     public function __invoke(Request $request)
     {
@@ -29,9 +30,9 @@ class DistrictController extends Controller
             );
         }
         return ApiResponse::sendResponse(
-            200,
-            'districts for this city is empty',
-            []
+            200,'districts for this city is empty',[]
         );
     }
+
+   
 }
