@@ -88,7 +88,7 @@ class AdController extends Controller
         })->latest()->get();
 
         if (count($ads) > 0) {
-            return ApiResponse::sendResponse(200,'Search completed',AdResource::collection($ads));
+            return ApiResponse::sendResponse(200, 'Search completed', AdResource::collection($ads));
         }
         return ApiResponse::sendResponse(200, 'No matching data', []);
     }
@@ -140,7 +140,11 @@ class AdController extends Controller
             );
         }
         $success = $ad->delete();
-        if ($success) return ApiResponse::sendResponse(200, 'Your Ad deleted successfully', []);
+        if ($success) return ApiResponse::sendResponse(
+            200,
+            'Your Ad deleted successfully',
+            []
+        );
     }
 
     public function myads(Request $request)
