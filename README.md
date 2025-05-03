@@ -52,4 +52,3 @@ You have to run all the migration files included with the project and also run s
 php artisan migrate
 php artisan db:seed
 ```
-# Laravel-Ads-API
