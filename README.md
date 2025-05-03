@@ -1,6 +1,5 @@
-## API COURSE (Project Files)
+## API-Ads (Project Files)
 
-<img src="https://img-b.udemycdn.com/course/750x422/5201852_fbea_3.jpg">
 
 **Created By :** Hussein Saad
 **Email :** hs777it@gmail.com
